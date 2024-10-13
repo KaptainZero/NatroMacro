@@ -15236,10 +15236,6 @@ nm_convert(){
 		while (((BackpackConvertTime := nowUnix()-ConvertStartTime)<300) && (BackpackPercentFiltered>0)) { ;5 mins
 			Sleep 1000
 			nm_AutoFieldBoost(currentField)
-			if(AFBuseGlitter || AFBuseBooster) {
-				nm_setStatus("Interupted", "AFB")
-				return
-			}
 			if (disconnectcheck()) {
 				return
 			}
